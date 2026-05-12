@@ -2,6 +2,7 @@
 
 <div class="form-container">
 
+  <!-- Two-way binding for form fields using ngModel. -->
   <input
     type="text"
     placeholder="Enter Name"
@@ -14,6 +15,7 @@
     [(ngModel)]="email"
   >
 
+  <!-- Conditional rendering: show Add or Update button based on editMode. -->
   @if(!editMode) {
 
     <button (click)="saveUser()">
@@ -40,6 +42,7 @@
 
 }
 
+<!-- Loop over users and render each user card. -->
 @for(user of users; track user.id) {
 
   <div class="user-card">
